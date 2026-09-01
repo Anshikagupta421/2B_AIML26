@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Management System</title>
+</head>
+<body>
+    <script>
+let bank = {
+    accHolderName: "Anshika",
+    accNumber: 227,
+    accBalance: 20000,
+
+    deposit: function(amount) {
+        if (amount > 0) {
+            this.accBalance += amount;
+            console.log(`Deposited: ₹${amount}`);  // Backticks (` `) are used to insert variables or expressions inside a string using ${}.
+        } else {
+            console.log("Deposit amount must be positive.");
+        }
+    },
+
+    withdraw: function(amount) {
+        if (amount > this.accBalance) {
+            console.log("Insufficient Balance");
+        } else if (amount > 0) {
+            this.accBalance -= amount;
+            console.log(`Withdrawn: ₹${amount}`);
+        } else {
+            console.log("Withdrawal amount must be positive.");
+        }
+    },
+
+    displayBalance: function() {
+        console.log("Current Balance: ₹" + this.accBalance);
+    }
+};
+
+bank.deposit(5000);
+bank.withdraw(30000);
+bank.displayBalance();
+    </script>
+    
+</body>
+</html>
