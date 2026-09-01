@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<script>
+    function student(name,roll,pincode,city){
+        this.name=name;
+        this.roll=roll;
+        this.pincode=pincode;
+        this.city=city;
+
+        this.display=function(){
+            console.log(this.name);
+        }
+    }
+    let s1=new student("vikas",101,201009,"modinagar");
+    let s2=new student("anshika",232,273015,"gorakhpur");
+    let s3=new student("vinni",231,250001,"meerut");
+    let s4=new student("yak",227,201001,"indirapurum");
+
+    s1.display();
+    s2.display();
+    s3.display();
+    s4.display();
+
+
+    // document.write("<h3>Student Records</h3>");
+    //     document.write(s1.name + " " + s1.roll + " " + s1.pincode + " " + s1.city + "<br>");
+    //     document.write(s2.name + " " + s2.roll + " " + s2.pincode + " " + s2.city + "<br>");
+    //     document.write(s3.name + " " + s3.roll + " " + s3.pincode + " " + s3.city + "<br>");
+    //     document.write(s4.name + " " + s4.roll + " " + s4.pincode + " " + s4.city + "<br>");
+
+</script>
+<body>
+    
+</body>
+</html>
