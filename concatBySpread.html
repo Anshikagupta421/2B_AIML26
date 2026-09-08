@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Concatenation by Spread</title>
+</head>
+<body>
+<script>
+    // User se input lena
+    let input1 = prompt("Enter first list (comma separated):");
+    let input2 = prompt("Enter second list (comma separated):");
+
+    // String ko array me convert + number me parse
+    let arr1 = input1.split(",").map(Number);
+    let arr2 = input2.split(",").map(Number);
+
+    // Concatenate using spread
+    let combined = [...arr1, ...arr2];
+
+    console.log("Concatenated Array:", combined);
+</script>
+</body>
+</html>
