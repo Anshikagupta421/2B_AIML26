@@ -1,0 +1,59 @@
+<!-- Bank Account Management System
+Create a class BankAccount with accountNo, holderName, and balance. Use a constructor to initialize the account. Provide instance methods deposit(amount), withdraw(amount), and displayBalance(). Withdrawal should not be allowed when the requested amount is greater than the available balance. Create a static method bankInfo() that displays the bank name and general banking information. Create two account objects and perform different transactions on them.
+Concepts Covered: Constructor, Objects, Instance Methods, Static Method, Object State -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Management System</title>
+</head>
+<body>
+    <script>
+        class BankAccount {
+            constructor(accountNo, holderName, balance) {
+                this.accountNo = accountNo;
+                this.holderName = holderName;
+                this.balance = balance;
+            }
+
+            deposit(amount) {
+                this.balance += amount;
+                console.log("Amount deposited:", amount);
+            }
+
+            withdraw(amount) {
+                if (amount > this.balance) {
+                    console.log("Insufficient balance");
+                } else {
+                    this.balance -= amount;
+                    console.log("Amount withdrawn:", amount);
+                }
+            }
+
+            displayBalance() {
+                console.log("Account Number:", this.accountNo);
+                console.log("Holder Name:", this.holderName);
+                console.log("Balance:", this.balance);
+            }
+
+            static bankInfo() {
+                console.log("Bank Name: National Bank");
+            }
+        }
+
+        BankAccount.bankInfo();
+
+        const acc1 = new BankAccount(73, "Anshika", 10000);
+        const acc2 = new BankAccount(32, "Tanu", 12000);
+
+        acc1.deposit(2000);
+        acc1.withdraw(5000);
+        acc1.displayBalance();
+
+        acc2.withdraw(15000);
+        acc2.deposit(3000);
+        acc2.displayBalance();
+    </script>
+</body>
+</html>
