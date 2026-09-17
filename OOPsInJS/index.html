@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OOPs Example</title>
+</head>
+<body>
+    <!-- <script>
+        class hello{
+            constructor(){
+                console.log("Hello ANSHIKA")
+            }
+        }
+        let h=new hello();
+        let h1=new hello();
+        </script> -->
+
+    
+<!-- let ka use class ke andar nhi hoga use this keyword -->
+    <script>
+        class Student {
+            constructor(name, rollNo, year) {
+                this.name = name;
+                this.rollNo = rollNo;
+                this.year=year;
+                console.log(this.name);
+                console.log(this.rollNo);
+                console.log(this.year);
+            }
+
+            // display() {
+            //     return "Name: " + this.name + "<br>Roll No: " + this.rollNo;
+            // }
+        }
+        Student.s1=new Student();
+        Student.s2=new Student("Anshika", 101, 2026);
+        Student.s3=new Student("Tanu",102,2027); 
+
+
+        console.log(Student);
+
+      
+    </script> 
+
+</body>
+</html>
