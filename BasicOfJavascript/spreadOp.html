@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use of Spread Operator </title>
+</head>
+<body>
+    <script>
+        function sum(...values){
+            let sum=0;
+            for(let i in values){
+                sum+=values[i];
+            }
+            console.log("sum is : " ,sum);
+        };
+        // User se input lena
+        let input = prompt("Enter numbers separated by commas:");
+        //or we can use
+        //  let input=parseInt(prompt("Enter numbers separated by commas:"));
+    
+        let ar = input.split(",").map(Number);
+
+        // Spread operator se pass karna
+        sum(...ar);
+        // let ar=[10,20,30,40];
+        // sum(...ar);
+        
+    </script>
+</body>
+</html>
