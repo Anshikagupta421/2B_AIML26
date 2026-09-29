@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(name,...value){
+            let total=0;
+            for(let n of value){
+                total=total+n;
+            }
+           
+        console.log("name: ",name);
+        console.log("total: ", total);
+        }
+   
+         console.log( sum("aashii",20,30));
+        console.log(sum("tanu",20,30,40));
+       
+
+    </script>
+</body>
+</html>
