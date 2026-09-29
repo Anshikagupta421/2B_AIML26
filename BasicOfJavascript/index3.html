@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function sum(){
+        let age=parseInt(prompt("Enter your age: "));
+        if(age>=18){
+            let c=confirm("Do you want to submit your response");
+            if(c){
+                 alert("Your response is submitted.");
+            }else{
+            alert("Thank you!");
+            }
+        }else{
+            alert("You are not eligible");
+        }
+    }
+</script>
+<body>
+    <input type="button" onclick="sum()" value="Result">
+</body>
+</html>
